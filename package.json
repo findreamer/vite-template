@@ -2,20 +2,23 @@
   "name": "vite-study",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
-    "lint:style": "stylelint --fix \"src/**/*.{css,scss}\""
+    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
+    "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
+    "commit": "git add . && npx commit"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@commitlint/prompt-cli": "^17.4.2",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -23,6 +26,7 @@
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-react": "^3.0.0",
     "autoprefixer": "^10.4.13",
+    "commitlint": "^17.4.2",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
