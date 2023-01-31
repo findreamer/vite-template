@@ -6,10 +6,12 @@ import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
 import svgr from 'vite-plugin-svgr';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const variablePath = normalizePath(path.resolve('./src/styles/variable.scss'));
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: isProduction ? '' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
