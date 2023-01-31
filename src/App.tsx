@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div>
+      <button onClick={() => setCount(count + 1)}>render</button>
       <Header />
       <ReactLogo />
     </div>

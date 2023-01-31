@@ -36,5 +36,6 @@ export default defineConfig({
         additionalData: `@import "${variablePath}";`
       }
     }
-  }
+  },
+  assetsInclude: ['.gltf']
 });
